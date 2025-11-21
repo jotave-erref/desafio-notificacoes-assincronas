@@ -2,6 +2,7 @@ package com.jotave.notificationapi.controller;
 
 import com.jotave.notificationapi.dto.AlertRequestDTO;
 import com.jotave.notificationapi.service.AlertService;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +22,7 @@ public class AlertsController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> sendAlert(@RequestBody AlertRequestDTO alertRequest){
+    public ResponseEntity<Void> sendAlert(@RequestBody @Valid AlertRequestDTO alertRequest){
 
         service.processAlert(alertRequest);
 
