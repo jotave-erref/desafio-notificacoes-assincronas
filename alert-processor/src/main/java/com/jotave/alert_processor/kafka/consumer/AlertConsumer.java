@@ -21,11 +21,11 @@ public class AlertConsumer {
      *   - Inscreve-se no tópico definido em 'topics'.
      *   - Fica escutando por novas mensagens.
      *   - Quando uma mensagem chega, o Spring a desserializa do JSON para o objeto AlertEventDTO
-     *     e a entrega como um parâmetro para este método.
+     *     e entrega como um parâmetro para este método
      */
     @KafkaListener(topics = "${app.kafka.topic}", groupId = "${{spring.kafka.consumer.group-id}")
     public void consumeAlert(AlertEventDTO alertEventDTO){
-        log.info("<<< Alerta recebido do Kafka! messageId: {}", alertEventDTO.getMessageId(), " >>>");
+        log.info("<<< Alerta recebido do Kafka! messageId: {}", alertEventDTO.getMessageId());
 
         try{
             alertProcessingService.processAndSaveAlert(alertEventDTO);

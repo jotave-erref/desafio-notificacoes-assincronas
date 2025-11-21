@@ -29,6 +29,8 @@ public class AlertProcessingService {
             Thread.currentThread().interrupt();
         }
 
+
+
         AlertEntity alertEntity = AlertEntity.fromDTO(eventDTO);
 
         alertEntity.setStatus(AlertStatus.PROCESSADO);
