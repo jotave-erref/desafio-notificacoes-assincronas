@@ -80,7 +80,7 @@ O repositório está organizado como um **monorepo**. Abaixo a visão geral dos 
 ```
 ---
 
-```markdown
+
 ## 🚀 Como Executar o Projeto
 
 Siga os passos abaixo para executar a aplicação completa em seu ambiente local.
@@ -91,7 +91,7 @@ Siga os passos abaixo para executar a aplicação completa em seu ambiente local
 *   Docker e Docker Compose
 
 ### Passo a Passo
-````
+
 **1. Clone o Repositório**
 
 
